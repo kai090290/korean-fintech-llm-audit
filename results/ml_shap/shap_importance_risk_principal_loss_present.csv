@@ -1,0 +1,161 @@
+﻿feature,mean_abs_shap
+num__risk_principal_loss_count,0.12530067188272087
+cat__scenario_id_S2,0.03655473830619177
+num__risk_total_count,0.03019043542039902
+num__risk_credit_impact_count,0.019102103700266704
+num__risk_credit_impact_present,0.01762263794556915
+num__risk_volatility_present,0.013469088623244987
+num__risk_volatility_count,0.013137367457812429
+cat__scenario_id_S5,0.007775947921720921
+cat__scenario_id_S3,0.00746505258856428
+cat__scenario_id_S1,0.0074637462519434785
+cat__scenario_id_S6,0.007191086666980485
+cat__scenario_id_S4,0.006820454806992845
+num__resp_n_chars,0.006173510579545147
+num__risk_leverage_present,0.00613486245518597
+num__risk_leverage_count,0.006043756383916425
+num__resp_avg_sentence_chars,0.005843535327868013
+num__resp_n_words,0.005433642229690267
+num__mentions_age,0.004579148230689808
+num__inst_fsc_count,0.0038975595736516883
+num__inst_fsc_present,0.0034759932815790267
+num__inst_total_count,0.0027063242887064324
+num__scam_official_channel_count,0.0026745247147975854
+num__priv_total_count,0.0026453378491307477
+num__risk_fees_count,0.0025058400192690482
+num__resp_n_english_tokens,0.0023449083323425707
+num__hedge_total_count,0.0023412674809799813
+num__hedge_uncertainty_count,0.0023334257848596825
+num__mentions_persona_name,0.002289665131414805
+num__scam_report_action_count,0.0022252772244267813
+num__priv_personal_info_count,0.002217562507452177
+num__risk_fees_present,0.0021198647241137555
+num__scam_scam_flag_count,0.002051118938269001
+num__resp_n_percent_mentions,0.001903727812365374
+cat__model_name_openrouter/deepseek/deepseek-chat,0.0017979878173023421
+num__scam_total_count,0.0017551249822810857
+num__risk_no_guarantee_count,0.0016923816087663513
+cat__model_name_openrouter/google/gemini-3-flash-preview,0.0016389663276729217
+num__resp_n_list_items,0.0015191631182557644
+num__risk_no_guarantee_present,0.0015048726268247158
+num__inst_police_count,0.0012882616485245032
+num__inst_fss_count,0.0012057316303400267
+num__risk_debt_burden_present,0.001186387480714253
+num__scam_official_channel_present,0.0010040367662261364
+num__inst_consumer_agency_present,0.0008775071841487187
+num__std_age_numeric,0.0008558486229727114
+num__mentions_occupation,0.0008532195257988515
+num__inst_consumer_agency_count,0.0008062769895210711
+num__risk_debt_burden_count,0.0007949966120452672
+num__resp_n_sentences,0.0007559227193625201
+num__scam_no_click_count,0.0007062573961365724
+cat__occupation_bucket_무직,0.0006386889454676676
+num__priv_data_minimization_count,0.0006348468294574218
+cat__model_name_openrouter/anthropic/claude-opus-4.6,0.0005899371309863968
+cat__model_name_openrouter/openai/gpt-4o,0.0005651935937077524
+num__scam_no_click_present,0.0005601146984177808
+num__priv_password_count,0.0004956766991729796
+num__priv_data_minimization_present,0.00047264815016745594
+num__priv_password_present,0.0004707931531958661
+num__inst_kisa_present,0.0004363516649870237
+num__inst_police_present,0.0004146042719712659
+num__resp_n_krw_mentions,0.0003908630777203866
+cat__model_name_openrouter/moonshotai/kimi-k2.5,0.0003416754002485064
+cat__std_education_4년제 대학교,0.0003354861107272388
+cat__std_education_고등학교,0.0003085350113926505
+cat__std_sex_여자,0.00029539553722771246
+cat__vulnerable_proxy_1,0.00029506647511395043
+cat__std_region_경기,0.00029427189135616783
+cat__std_housing_아파트,0.0002887805276945602
+num__mentions_region,0.0002768961320481743
+cat__std_sex_남자,0.00027048874122104785
+num__inst_kisa_count,0.0002700632682734017
+cat__vulnerable_proxy_0,0.0002447228515368877
+cat__occupation_bucket_기타,0.0002357013066611053
+cat__marital_status_배우자있음,0.00022319536708777604
+cat__std_housing_단독주택,0.0002186955407096675
+cat__age_group_60-69,0.00020560209056581333
+cat__age_group_40-49,0.0002050597553879962
+cat__std_household_배우자·자녀와 거주,0.00020414698138077856
+cat__age_group_30-39,0.0001949993390393152
+cat__std_household_배우자와 거주,0.0001947215517123549
+cat__age_group_19-29,0.0001877741153723783
+cat__age_group_70+,0.00018157945139264098
+cat__marital_status_미혼,0.0001796634646721485
+num__priv_otp_count,0.00015479697102844893
+cat__std_education_2~3년제 전문대학,0.0001500293544787215
+num__priv_otp_present,0.00014112266878442436
+cat__std_household_부모와 동거,0.0001384281670247302
+cat__std_household_기타2세대,0.0001312485821863129
+cat__std_region_서울,0.00012335410640896635
+cat__std_household_혼자 거주,0.00011476036745068058
+cat__std_education_중학교,0.00011145326942314173
+cat__age_group_50-59,0.00010773735742219377
+cat__std_housing_다세대주택,0.00010704154808013203
+cat__std_region_경상남,0.00010207002029818805
+num__inst_kftc_count,9.478688300295618e-05
+cat__std_region_광주,7.831240653636029e-05
+cat__std_region_제주,7.390918823244206e-05
+cat__std_housing_주택 이외의 거처,6.900919030161763e-05
+cat__std_region_충청남,6.573651911642536e-05
+cat__std_region_세종,6.245202954099045e-05
+cat__std_household_혼자 거주 (배우자 별거),5.918428075476797e-05
+cat__std_region_경상북,5.7426211424428456e-05
+cat__std_education_초등학교,5.306546734203526e-05
+cat__std_region_부산,5.284223820166831e-05
+num__inst_kftc_present,5.231080647353524e-05
+cat__occupation_bucket_지게차 운전원,5.2050269770218166e-05
+num__inst_fss_present,4.782632760167331e-05
+cat__std_region_울산,4.4144943252977275e-05
+cat__std_region_대구,3.943626351849501e-05
+cat__occupation_bucket_시설 경비원,3.476221362400403e-05
+cat__std_household_자녀와 거주 (배우자 별거),3.142968264640547e-05
+cat__std_education_대학원,3.0337624852440048e-05
+cat__std_region_전라남,3.0167914439251484e-05
+num__scam_report_action_present,2.8530329112067243e-05
+num__inst_bok_count,2.7874551275231506e-05
+cat__std_region_인천,2.706144800884333e-05
+num__mentions_district,2.5760671838062634e-05
+cat__std_household_손자녀와 거주,2.498989218004379e-05
+cat__std_household_기타3세대,2.4459045319885347e-05
+num__inst_bok_present,2.4347735841054094e-05
+cat__marital_status_사별,2.2034922589159792e-05
+cat__occupation_bucket_전화 상담원,2.1618363040504904e-05
+cat__std_region_충청북,2.1283022187666515e-05
+cat__occupation_bucket_노점 및 이동 판매원,2.0963976689670315e-05
+cat__std_region_강원,1.763182057900884e-05
+cat__std_education_무학,1.7343583725009297e-05
+cat__occupation_bucket_사무 보조원,1.7135807305690147e-05
+cat__occupation_bucket_그 외 상점 판매원,1.4803898162907765e-05
+cat__std_region_대전,1.47675374918552e-05
+cat__marital_status_이혼,1.193801755066134e-05
+cat__std_household_형제자매와 동거 (가구주),1.0911225593178538e-05
+cat__occupation_bucket_보육교사,1.061317529234096e-05
+cat__occupation_bucket_주방 보조원,1.0304323562228104e-05
+num__inst_tax_count,1.006556936044246e-05
+cat__std_household_어머니와 동거,8.60427704144082e-06
+cat__std_household_배우자·편부모와 거주,7.117247247693322e-06
+cat__std_household_자녀와 거주 (한부모),6.775151175453735e-06
+cat__occupation_bucket_상담 전문가,6.31480817001755e-06
+cat__std_region_전북,5.973234753626234e-06
+cat__occupation_bucket_건물 경비원,5.943965849877744e-06
+num__hedge_uncertainty_present,5.685903800370062e-06
+cat__occupation_bucket_일반 간호사,5.592054375168002e-06
+cat__occupation_bucket_금속절곡기 조작원,5.093270011833561e-06
+cat__std_household_친인척과 거주,4.202526862303528e-06
+cat__std_household_비친족 동거,3.991643286319614e-06
+num__inst_tax_present,3.450233283816256e-06
+cat__occupation_bucket_경호원,1.917378597233894e-06
+cat__occupation_bucket_판금원,1.2688630078980629e-06
+cat__occupation_bucket_영업 관리 사무원,0.0
+"cat__occupation_bucket_전직 일반 간호사, 현재 구직중",0.0
+num__inst_ftc_present,0.0
+cat__occupation_bucket_마케팅 전문가,0.0
+cat__occupation_bucket_데이터 분석가,0.0
+num__inst_kdic_present,0.0
+num__inst_kdic_count,0.0
+cat__std_housing_비주거용 건물 내 주택,0.0
+cat__std_housing_연립주택,0.0
+num__scam_scam_flag_present,0.0
+cat__std_household_부모·형제자매와 동거,0.0
+num__inst_ftc_count,0.0

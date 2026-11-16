@@ -1,0 +1,81 @@
+                                Logit Regression Results                               
+=======================================================================================
+Dep. Variable:     risk_principal_loss_present   No. Observations:                  555
+Model:                                   Logit   Df Residuals:                      491
+Method:                                    MLE   Df Model:                           63
+Date:                         Fri, 01 May 2026   Pseudo R-squ.:                  0.6306
+Time:                                 00:08:30   Log-Likelihood:                -2.7034
+converged:                               False   LL-Null:                       -7.3181
+Covariance Type:                     nonrobust   LLR p-value:                     1.000
+=============================================================================================================
+                                                coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------
+Intercept                                   -15.5725        nan        nan        nan         nan         nan
+C(age_group)[T.30-39]                        -0.9744   7.97e+08  -1.22e-09      1.000   -1.56e+09    1.56e+09
+C(age_group)[T.40-49]                        20.2087        nan        nan        nan         nan         nan
+C(age_group)[T.50-59]                        -1.8491   1.92e+08  -9.64e-09      1.000   -3.76e+08    3.76e+08
+C(age_group)[T.60-69]                         1.1773   1.57e+10   7.49e-11      1.000   -3.08e+10    3.08e+10
+C(age_group)[T.70+]                           7.8638    9.7e+09   8.11e-10      1.000    -1.9e+10     1.9e+10
+C(std_sex)[T.여자]                              1.2623   1.91e+07   6.61e-08      1.000   -3.74e+07    3.74e+07
+C(std_region)[T.경기]                           8.4514        nan        nan        nan         nan         nan
+C(std_region)[T.경상남]                          5.2659   8.41e+08   6.26e-09      1.000   -1.65e+09    1.65e+09
+C(std_region)[T.경상북]                          2.0290    1.5e+10   1.35e-10      1.000   -2.95e+10    2.95e+10
+C(std_region)[T.광주]                         -17.8387   5.25e+07   -3.4e-07      1.000   -1.03e+08    1.03e+08
+C(std_region)[T.대구]                          -5.7844   1.02e+08  -5.65e-08      1.000   -2.01e+08    2.01e+08
+C(std_region)[T.대전]                          -4.4902   3.96e+08  -1.13e-08      1.000   -7.76e+08    7.76e+08
+C(std_region)[T.부산]                          -3.6172   4.89e+09   -7.4e-10      1.000   -9.58e+09    9.58e+09
+C(std_region)[T.서울]                          -4.9067   6.63e+08   -7.4e-09      1.000    -1.3e+09     1.3e+09
+C(std_region)[T.세종]                           0.7897   8.37e+08   9.44e-10      1.000   -1.64e+09    1.64e+09
+C(std_region)[T.울산]                           4.2285   1.12e+09   3.77e-09      1.000    -2.2e+09     2.2e+09
+C(std_region)[T.인천]                          -8.3527   4.89e+09  -1.71e-09      1.000   -9.58e+09    9.58e+09
+C(std_region)[T.전라남]                        -10.7888   2.66e+11  -4.05e-11      1.000   -5.22e+11    5.22e+11
+C(std_region)[T.전북]                          14.5664   1.09e+09   1.34e-08      1.000   -2.14e+09    2.14e+09
+C(std_region)[T.제주]                          -0.0670   4.01e+08  -1.67e-10      1.000   -7.86e+08    7.86e+08
+C(std_region)[T.충청남]                        -15.7206      4e+08  -3.93e-08      1.000   -7.84e+08    7.84e+08
+C(std_region)[T.충청북]                        -17.9181        nan        nan        nan         nan         nan
+C(std_education)[T.4년제 대학교]                   3.1128        nan        nan        nan         nan         nan
+C(std_education)[T.고등학교]                     -6.0408   3.99e+08  -1.51e-08      1.000   -7.82e+08    7.82e+08
+C(std_education)[T.대학원]                      -4.6343    6.9e+09  -6.71e-10      1.000   -1.35e+10    1.35e+10
+C(std_education)[T.무학]                      -18.5055   7.81e+09  -2.37e-09      1.000   -1.53e+10    1.53e+10
+C(std_education)[T.중학교]                       1.0059   8.32e+09   1.21e-10      1.000   -1.63e+10    1.63e+10
+C(std_education)[T.초등학교]                     -4.2719   7.38e+09  -5.79e-10      1.000   -1.45e+10    1.45e+10
+C(std_household)[T.기타3세대]                   -11.8799   7.99e+08  -1.49e-08      1.000   -1.57e+09    1.57e+09
+C(std_household)[T.배우자·자녀와 거주]              -11.2570        nan        nan        nan         nan         nan
+C(std_household)[T.배우자·편부모와 거주]              -4.7239    1.4e+11  -3.38e-11      1.000   -2.74e+11    2.74e+11
+C(std_household)[T.배우자와 거주]                  -8.9204   8.86e+08  -1.01e-08      1.000   -1.74e+09    1.74e+09
+C(std_household)[T.부모·형제자매와 동거]              -4.6538    1.2e+09  -3.89e-09      1.000   -2.35e+09    2.35e+09
+C(std_household)[T.부모와 동거]                   -4.1980   4.01e+08  -1.05e-08      1.000   -7.86e+08    7.86e+08
+C(std_household)[T.비친족 동거]                   12.4972    6.9e+09   1.81e-09      1.000   -1.35e+10    1.35e+10
+C(std_household)[T.손자녀와 거주]                   0.7715   2.68e+11   2.88e-12      1.000   -5.25e+11    5.25e+11
+C(std_household)[T.어머니와 동거]                  -5.2497   5.57e+11  -9.42e-12      1.000   -1.09e+12    1.09e+12
+C(std_household)[T.자녀와 거주 (배우자 별거)]          -1.8631   1.46e+10  -1.28e-10      1.000   -2.85e+10    2.85e+10
+C(std_household)[T.자녀와 거주 (한부모)]              0.1838   9.48e+09   1.94e-11      1.000   -1.86e+10    1.86e+10
+C(std_household)[T.친인척과 거주]                  14.3601   1.56e+09   9.18e-09      1.000   -3.06e+09    3.06e+09
+C(std_household)[T.형제자매와 동거 (가구주)]            1.3469   7.83e+08   1.72e-09      1.000   -1.53e+09    1.53e+09
+C(std_household)[T.혼자 거주]                   -14.0552   9.64e+09  -1.46e-09      1.000   -1.89e+10    1.89e+10
+C(std_household)[T.혼자 거주 (배우자 별거)]            7.2597   9.53e+09   7.62e-10      1.000   -1.87e+10    1.87e+10
+C(occupation_bucket)[T.경호원]                 -13.6918   5.57e+11  -2.46e-11      1.000   -1.09e+12    1.09e+12
+C(occupation_bucket)[T.그 외 상점 판매원]          -20.1360   4.89e+09  -4.12e-09      1.000   -9.58e+09    9.58e+09
+C(occupation_bucket)[T.금속절곡기 조작원]            11.3695   4.62e+09   2.46e-09      1.000   -9.05e+09    9.05e+09
+C(occupation_bucket)[T.기타]                  -24.9344   3.99e+08  -6.24e-08      1.000   -7.83e+08    7.83e+08
+C(occupation_bucket)[T.노점 및 이동 판매원]          -8.0188   2.23e+10  -3.59e-10      1.000   -4.37e+10    4.37e+10
+C(occupation_bucket)[T.데이터 분석가]             -29.4055   8.46e+08  -3.48e-08      1.000   -1.66e+09    1.66e+09
+C(occupation_bucket)[T.마케팅 전문가]             -19.0382    2.3e+10  -8.27e-10      1.000   -4.51e+10    4.51e+10
+C(occupation_bucket)[T.무직]                   -7.8152        nan        nan        nan         nan         nan
+C(occupation_bucket)[T.보육교사]                -23.6981   7.98e+08  -2.97e-08      1.000   -1.56e+09    1.56e+09
+C(occupation_bucket)[T.사무 보조원]              -15.1304   7.98e+08   -1.9e-08      1.000   -1.56e+09    1.56e+09
+C(occupation_bucket)[T.상담 전문가]              -17.5818   3.97e+08  -4.43e-08      1.000   -7.79e+08    7.79e+08
+C(occupation_bucket)[T.시설 경비원]                1.6105   4.03e+08      4e-09      1.000    -7.9e+08     7.9e+08
+C(occupation_bucket)[T.영업 관리 사무원]           -12.4329   8.02e+09  -1.55e-09      1.000   -1.57e+10    1.57e+10
+C(occupation_bucket)[T.일반 간호사]              -14.1123   1.34e+09  -1.06e-08      1.000   -2.62e+09    2.62e+09
+C(occupation_bucket)[T.전직 일반 간호사, 현재 구직중]   -10.0244   1.43e+11  -7.02e-11      1.000    -2.8e+11     2.8e+11
+C(occupation_bucket)[T.전화 상담원]              -19.6285    8.9e+08  -2.21e-08      1.000   -1.74e+09    1.74e+09
+C(occupation_bucket)[T.주방 보조원]              -41.0694   8.49e+08  -4.84e-08      1.000   -1.66e+09    1.66e+09
+C(occupation_bucket)[T.지게차 운전원]             -24.6331   3.98e+08  -6.18e-08      1.000   -7.81e+08    7.81e+08
+C(occupation_bucket)[T.판금원]                 -14.1183   9.37e+09  -1.51e-09      1.000   -1.84e+10    1.84e+10
+C(vulnerable_proxy)[T.1]                    -21.3059   9.49e+09  -2.25e-09      1.000   -1.86e+10    1.86e+10
+=============================================================================================================
+
+Possibly complete quasi-separation: A fraction 0.99 of observations can be
+perfectly predicted. This might indicate that there is complete
+quasi-separation. In this case some parameters will not be identified.

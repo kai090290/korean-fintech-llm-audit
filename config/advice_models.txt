@@ -1,0 +1,17 @@
+# Advice models — prefer OpenRouter (OPENROUTER_API_KEY) so one key covers vendor slugs.
+# One model per line. IDs must match OpenRouter catalog where prefixed with openrouter/
+# (see https://openrouter.ai/models).
+#
+# Current slate (5 models):
+openrouter/openai/gpt-4o
+openrouter/anthropic/claude-opus-4.6
+openrouter/google/gemini-3-flash-preview
+openrouter/deepseek/deepseek-chat
+openrouter/moonshotai/kimi-k2.5
+#
+# Same logical models as bare slugs, but openrouter/… is required for kimi and recommended
+# for opus if you want routing via OpenRouter. Native Anthropic instead:
+#   anthropic/claude-opus-4.6  (uses ANTHROPIC_API_KEY, not OpenRouter)
+#
+# Cheaper OpenAI tier for shallow vs deep comparison:
+# openrouter/openai/gpt-4o-mini

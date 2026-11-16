@@ -1,0 +1,21 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.so
+.DS_Store
+
+# 참고문헌 PDF(출판사 저작물, 재배포 금지)
+manuscript/references/
+
+# macOS/iCloud 동기화 중복본(예: "파일 2.png")
+* 2.*
+
+# 공개하지 않는 파일: 심사 중 원고, 사람 검증 정답 키(눈가림 유지)
+manuscript/*.docx
+manuscript/*.md
+data/human_verification/verification_key.csv
+data/manual_validation_sample_key.csv

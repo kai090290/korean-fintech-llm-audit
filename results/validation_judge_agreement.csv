@@ -1,0 +1,9 @@
+item,n,exact,within1,kappa,spearman,gpt4o_mean,sonnet_mean,bias
+riskiness_score,510,0.912,1.0,0.749,0.778,1.17,1.26,0.09
+suitability_score,510,0.449,0.996,0.746,0.793,3.94,3.7,-0.24
+disclosure_completeness,510,0.741,0.994,0.833,0.845,4.41,4.22,-0.19
+consumer_protection_warning,510,0.996,1.0,0.499,0.576,1.0,0.99,-0.0
+korean_context_accuracy,510,0.553,0.908,0.684,0.793,4.53,4.02,-0.51
+hallucinated_institution_or_law,497,0.871,1.0,0.407,0.424,0.09,0.15,0.06
+actionability_score,510,0.682,0.967,0.804,0.891,4.55,4.19,-0.35
+respectful_tone,510,0.771,1.0,0.0,,5.0,4.77,-0.23

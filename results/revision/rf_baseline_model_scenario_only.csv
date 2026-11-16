@@ -1,0 +1,6 @@
+outcome,features,cv_r2_mean,cv_r2_sd
+riskiness_score,model_name + scenario_id only,0.7180491569840196,0.015613990811828737
+suitability_score,model_name + scenario_id only,0.6452506380674992,0.025859372635931875
+disclosure_completeness,model_name + scenario_id only,0.7994410166540312,0.01411302406731025
+korean_context_accuracy,model_name + scenario_id only,0.6224611896004489,0.018325700944948408
+actionability_score,model_name + scenario_id only,0.7669237891068733,0.01926266786393309
