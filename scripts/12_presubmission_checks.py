@@ -266,6 +266,54 @@ def agreement_by_model() -> pd.DataFrame:
     return t
 
 
+def agreement_extended(n_boot: int = 2000, seed: int = 11) -> dict:
+    """Judge agreement by scenario, persona-cluster bootstrap CIs, and sensitivity to the 13 missing
+    second-judge hallucination values (set all to 0, all to 1)."""
+    from sklearn.metrics import cohen_kappa_score as ck
+    ev = pd.read_csv(ROOT / "data" / "evaluation_scores.csv")
+    j2 = pd.read_csv(ROOT / "data" / "validation_judge2.csv")
+    key = ["persona_id", "scenario_id", "model_name"]
+    m = j2.merge(ev, on=key, suffixes=("_2", "_1"))
+    m = m[m["model_name"].isin(MODELS)].reset_index(drop=True)
+    m["model"] = m["model_name"].map(MODELS)
+    K1, K2 = "korean_context_accuracy_1", "korean_context_accuracy_2"
+    H1, H2 = "hallucinated_institution_or_law_1", "hallucinated_institution_or_law_2"
+
+    def kk(g):
+        g = g.dropna(subset=[K1, K2])
+        return ck(g[K1].astype(int), g[K2].astype(int), weights="quadratic") if g[K1].nunique() + g[K2].nunique() > 2 else np.nan
+
+    def kh(g):
+        g = g.dropna(subset=[H1, H2])
+        return ck(g[H1].astype(int), g[H2].astype(int), weights="linear")
+
+    rows = [{"group": f"scenario {s}", "n": len(g), "kca_qkappa": kk(g), "hall_kappa": kh(g)} for s, g in m.groupby("scenario_id")]
+    sc = pd.DataFrame(rows)
+    sc.to_csv(OUT / "judge_agreement_by_scenario.csv", index=False)
+
+    rng = np.random.default_rng(seed)
+    pids = m["persona_id"].unique()
+    idx = {p: np.flatnonzero(m["persona_id"].to_numpy() == p) for p in pids}
+    boots = {"kca_all": [], "hall_all": [], **{f"kca_{k}": [] for k in ORDER}}
+    for _ in range(n_boot):
+        take = np.concatenate([idx[p] for p in rng.choice(pids, size=len(pids), replace=True)])
+        b = m.iloc[take]
+        boots["kca_all"].append(kk(b))
+        boots["hall_all"].append(kh(b))
+        for k in ORDER:
+            boots[f"kca_{k}"].append(kk(b[b["model"] == k]))
+    ci = {k: (np.nanpercentile(v, 2.5), np.nanpercentile(v, 97.5)) for k, v in boots.items()}
+    pd.DataFrame([{"stat": k, "ci_low": a, "ci_high": b} for k, (a, b) in ci.items()]).to_csv(OUT / "judge_agreement_bootstrap_ci.csv", index=False)
+
+    sens = {}
+    for fill in (0, 1):
+        g = m.copy()
+        g[H2] = g[H2].fillna(fill)
+        sens[f"hall_kappa_missing_as_{fill}"] = kh(g)
+    pd.DataFrame([sens]).to_csv(OUT / "judge_agreement_missing_sensitivity.csv", index=False)
+    return {"by_scenario": sc, "ci": ci, "missing_sensitivity": sens}
+
+
 if __name__ == "__main__":
     pd.set_option("display.width", 200)
     df = load()
@@ -283,3 +331,7 @@ if __name__ == "__main__":
     print("[5] ceiling\n", ceiling(df).round(4).to_string(index=False))
     print("[6] occupation:", occupation(df))
     print("[7] agreement by model\n", agreement_by_model().round(3).to_string(index=False))
+    ext = agreement_extended()
+    print("[8] agreement by scenario\n", ext["by_scenario"].round(3).to_string(index=False))
+    print("    bootstrap 95% CI:", {k: (round(a, 3), round(b, 3)) for k, (a, b) in ext["ci"].items()})
+    print("    missing sensitivity:", {k: round(v, 3) for k, v in ext["missing_sensitivity"].items()})
