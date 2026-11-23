@@ -1,0 +1,6 @@
+model,n,dict_detected,broad_detected,candidate_miss
+Opus 4.6,100.0,0.83,1.0,17.0
+DeepSeek,100.0,0.84,0.86,2.0
+Gemini 3 Flash,100.0,0.35,1.0,65.0
+Kimi K2.5,100.0,0.5,1.0,50.0
+GPT-4o,100.0,1.0,1.0,0.0

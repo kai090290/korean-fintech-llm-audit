@@ -40,7 +40,7 @@
 
 | 단계 | 스크립트 | 하는 일 |
 |---|---|---|
-| 1 | `00_sample_personas.py` | 페르소나 100개 층화 추출(시드 42) |
+| 1 | `00_sample_personas.py` | 페르소나 100개 추출: 연령대×성별×지역 층마다 최소 1명을 비례 배정한 뒤 100명을 넘으면 시드 42로 다시 무작위 추출 |
 | 2 | `01_build_prompt_grid.py` | 페르소나 × 시나리오 프롬프트 생성 |
 | 3 | `02_generate_outputs.py` | 자문 모델 응답 생성(API 필요) |
 | 4 | `03_score_outputs.py` | 채점 모델로 루브릭 채점(API 필요) |
@@ -53,6 +53,8 @@
 | 11 | `08_revision_checks.py`, `10_measurement_rq2_checks.py` | 심사 대응 추가 분석 |
 | 12 | `09_human_verification_sheet.py` | 사람 검증 제안용 검증표 생성 |
 | 13 | `11_docx_three_line_tables.py` | 원고 docx 표를 학술지 3선 표 서식으로 변환 |
+| 14 | `12_presubmission_checks.py` | 투고 전 점검: 기관 언급 중복 집계 수정, 어휘 지표 미검출, Friedman 검정 집합, 부트스트랩 영분모, 유효 분모, 모델별 채점 일치도 |
+| 15 | `13_presubmission_ml.py` | 투고 전 점검: 중복 없이 센 기관 언급 수로 표 10(교차검증 R²)과 그림 7(SHAP) 재추정 |
 
 ## 재현 방법
 
@@ -81,6 +83,19 @@ cd manuscript
 pandoc manuscript_full_ko.md -o manuscript_full_ko.docx --columns=2000 --resource-path=. --reference-doc=kfma_reference.docx
 python ../scripts/11_docx_three_line_tables.py manuscript_full_ko.docx
 ```
+
+## 투고 전 점검 (2026-11-23)
+
+보관된 응답과 채점 결과만으로 다시 계산하며 API 키가 필요 없습니다. 결과는 `results/presubmission/`에 저장됩니다.
+
+```bash
+python scripts/12_presubmission_checks.py
+python scripts/13_presubmission_ml.py
+```
+
+- **기관 언급 수 중복 집계 수정:** `03b_response_features.py`는 이제 같은 글자에 겹쳐 맞는 패턴(예: `금융위원회`와 `금융위`)을 한 번으로 셉니다. 학술대회 발표본에 쓴 옛 방식은 `_count_matches_raw`로 남겨 두었습니다. 보관된 `data/response_features.csv`는 옛 방식의 값이므로, `03b`를 다시 실행하면 기관 언급 횟수가 바뀝니다(유효 응답 2,998개 중 730개).
+- **어휘 지표:** 사전에 정의한 표현의 검출 여부이며 의미상의 언급률이 아닙니다. `lexical_human_review_sample.csv`는 사람 검토용 표본(106개 응답)입니다.
+- **패키지 버전:** 재계산에 쓴 정확한 버전은 `requirements-lock.txt`에 있습니다.
 
 ## 유의 사항
 

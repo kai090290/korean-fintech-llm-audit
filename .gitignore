@@ -19,3 +19,6 @@ manuscript/*.docx
 manuscript/*.md
 data/human_verification/verification_key.csv
 data/manual_validation_sample_key.csv
+
+# 재생성 가능한 대용량 중간 파일 (scripts/13_presubmission_ml.py가 다시 만듦)
+results/presubmission/analysis_dataset_inst_dedup.csv

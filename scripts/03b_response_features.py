@@ -103,10 +103,26 @@ LEXICONS_NAMED = [
 ]
 
 
-def _count_matches(text: str, patterns: list[str]) -> int:
+def _count_matches_raw(text: str, patterns: list[str]) -> int:
+    """Original counter (manuscript submitted to the conference): sums matches of every pattern,
+    so one "금융위원회" was counted twice (r"금융위원회" and r"금융위"). Kept for reproducing old tables."""
     n = 0
     for p in patterns:
         n += len(re.findall(p, text))
+    return n
+
+
+def _count_matches(text: str, patterns: list[str]) -> int:
+    """Number of mentions: matches from all patterns are merged so that overlapping matches on the
+    same characters count once (the longest match wins). Fixed 2026-11-23."""
+    spans = sorted((m.span() for p in patterns for m in re.finditer(p, text)), key=lambda s: (s[0], -(s[1] - s[0])))
+    n, end = 0, -1
+    for a, b in spans:
+        if a >= end:
+            n += 1
+            end = b
+        else:
+            end = max(end, b)
     return n
 
 

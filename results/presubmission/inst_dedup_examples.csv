@@ -1,0 +1,6 @@
+persona_id,scenario_id,model,inst_raw,inst_dedup
+220ed75a8eb04a70aecbc209156c7d15,S4,GPT-4o,7,6
+59ed8bae1c0048fd9a7f7a0fe7fb52e9,S4,GPT-4o,6,4
+ae9a34884aec429eb882d73966897dec,S4,GPT-4o,4,3
+bdfe3e4b030a4189a49a06a7e3743780,S2,GPT-4o,3,2
+bdfe3e4b030a4189a49a06a7e3743780,S4,GPT-4o,6,4
